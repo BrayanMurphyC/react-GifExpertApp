@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react'
-
+// import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useFetchGifs } from '../hooks/useFetchGifs'
 import { GifGridItem } from './GifGridItem';
-import { getGifs } from '../helpers/getGifs';
+
 
 export const GifGrid = ( { category } ) => { //recibimos los props entre llaves desde el padre
 
-    const [images, setImages] = useState([])
-    
-    // useEffect es para que se ejecuta una sola vez el componente
-    useEffect(() => {
-        getGifs( category ).then(setImages);       
-    }, [ category ])
-    
-
+       
+    // usaremos el custom HOOK
+    const { data:images,loading } = useFetchGifs( category );
+      
     return (
         <>
             <h3>{ category } </h3>
+            { loading ? 'Cargando...' : 'Data Cargada' }
         <div className="card-grid">
             
                 { 
