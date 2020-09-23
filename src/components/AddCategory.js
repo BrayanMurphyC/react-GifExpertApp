@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 // SetCategories recibimos el prop desde el padre GifExperteApp
-const AddCategory = ( { setCategories } ) => {
+export const AddCategory = ( { setCategories } ) => {
 
     // Para poder escribir en el input usamos useState
     const [inputValue, setInputValue] = useState('');
@@ -37,7 +37,6 @@ const AddCategory = ( { setCategories } ) => {
     )
 }
 
-export default AddCategory
 
 // Para que utilice el componente con la funcion que se necesita
 AddCategory.propTypes={

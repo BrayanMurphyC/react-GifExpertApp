@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import AddCategory from './components/AddCategory'
+import { AddCategory }  from './components/AddCategory'
+import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+
+export const GifExpertApp = () => {
     // const categories = ['One punch', 'Samurai X', 'Dragon Ball', 'One Piece']
 
     // useState es un Hook que te permite añadir el estado de React a un componente funcional
@@ -22,13 +24,14 @@ const GifExpertApp = () => {
             {/* <button onClick={ handleAdd }>Agregar</button> */}
             <ol>
                 { 
-                    categories.map(category => {
-                        return <li key={ category }> { category } </li>
-                    }) 
+                    categories.map( category => (
+                        <GifGrid 
+                        key={category}
+                        category={ category}/>
+                    ))
                 }
             </ol>
         </>
     )
 }
 
-export default GifExpertApp
