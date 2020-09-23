@@ -6,3 +6,8 @@ body{
   padding: 60px;
   margin-top: 1ch;
 }
+input{
+  width: 100%;
+  font-size: 1.2rem;
+  color: blueviolet;
+}
