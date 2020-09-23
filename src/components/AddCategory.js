@@ -13,12 +13,12 @@ export const AddCategory = ( { setCategories } ) => {
         setInputValue(e.target.value);      
     }
 
-    // Para agregar a la lista
+    // Para agregar a la lista o en el array
     const handleSubmit = (e) => {
         e.preventDefault(); //con el envio no se recarge
         // console.log( {'Submit hecho'} );
         if (inputValue.trim().length > 2) {            
-            setCategories( cats => [...cats, inputValue]);
+            setCategories( cats => [inputValue, ...cats]);
             setInputValue('');
         }
 

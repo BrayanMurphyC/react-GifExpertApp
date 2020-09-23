@@ -7,7 +7,7 @@ export const GifExpertApp = () => {
     // const categories = ['One punch', 'Samurai X', 'Dragon Ball', 'One Piece']
 
     // useState es un Hook que te permite añadir el estado de React a un componente funcional
-    const [categories, setCategories] = useState(['One punch']);
+    const [categories, setCategories] = useState(['']);
 
     // Para añadir el elementro al arreglo con setCategories de useState
     // const handleAdd = () =>{
@@ -20,8 +20,9 @@ export const GifExpertApp = () => {
         <>
             <h2>GifExpertApp</h2>
             <hr/>
+            {/* agregamos la neuva categoria al arreglo */}
             <AddCategory setCategories={ setCategories }/>
-            {/* <button onClick={ handleAdd }>Agregar</button> */}
+            {/* <button onClick={ handleAdd }>Agregar</button> */} 
             <ol>
                 { 
                     categories.map( category => (
