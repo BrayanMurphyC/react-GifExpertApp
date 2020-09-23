@@ -22,11 +22,5 @@ export const useFetchGifs = ( category ) => {
     });  
    }, [category])
 
-
-    // // useEffect es para que se ejecuta una sola vez el componente
-    // useEffect(() => {
-    //     getGifs( category ).then(setImages);       
-    // }, [ category ]) 
-
    return state;
 }

@@ -12,8 +12,8 @@ export const GifGrid = ( { category } ) => { //recibimos los props entre llaves 
       
     return (
         <>
-            <h3>{ category } </h3>
-            { loading ? 'Cargando...' : 'Data Cargada' }
+            <h3 className="animate__animated animate__bounce">{ category } </h3>
+            { loading && <p className="animate__animated animate__bounce">Loading</p> }
         <div className="card-grid">
             
                 { 
